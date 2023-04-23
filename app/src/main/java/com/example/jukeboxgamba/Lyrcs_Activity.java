@@ -18,28 +18,31 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class Lyrcs_Activity extends AppCompatActivity {
-final String TAG = "Lyrcs_Activity";
+    final String TAG = "Lyrics_Activity";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        Log.d(TAG,"Dentro la seconda activity");
+
         setContentView(R.layout.activity_lyrcs);
+        ImageView immagine = findViewById(R.id.idimmagine);
+        immagine.setImageResource(immagine);
+        TextView txttitolo = findViewById(R.id.textView3);
+        txttiotolo.setText(titolo);
+
+        Intent i = getIntent();
+
+        Bundle B = i.getExtras();
+
+        int numero = B.getInt("Numero");
+
+        Log.d(TAG,"Numero passato;"+ numero);
+        String titolo;
+        if(numero==10)
+            titolo="Patience";
+
     }
-    Intent i = getIntent();
-
-    Bundle B = i.getExtras();
-
-    int numero = B.getInt("Numero");
-
-    Log.d(TAG,"Numero passato;"+ numero);
-    String titolo;
-    if(numero==10)
-        titolo="Patience";
-
-    TextView txttitolo = findViewById(R.id.textView3);
-
-    txttiotolo.setText(titolo);
-
-    ImageView immagine = findViewById(R.id.idimmagine);
-    immagine.setImageResource(R.drawable.cover);
-    ImageView image = new ImageView(Lyrcs_Activity.class);
+    ImageView image = new ImageView(getApplicationContext());
 }
