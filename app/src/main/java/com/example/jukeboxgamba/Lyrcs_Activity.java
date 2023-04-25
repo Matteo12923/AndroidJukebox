@@ -28,9 +28,9 @@ public class Lyrcs_Activity extends AppCompatActivity {
 
         setContentView(R.layout.activity_lyrcs);
         ImageView immagine = findViewById(R.id.idimmagine);
-        immagine.setImageResource(immagine);
-        TextView txttitolo = findViewById(R.id.textView3);
-        txttiotolo.setText(titolo);
+        immagine.setImageResource(R.drawable.ImmagineCanzone);
+       // TextView txttitolo = findViewById(R.id.textView3);
+        //txttiotolo.setText(titolo);
 
         Intent i = getIntent();
 
